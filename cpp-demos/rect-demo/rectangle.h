@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "shape.h"
 
 using namespace std;
 
@@ -8,12 +9,12 @@ enum Orientation {
     VERTICAL
 };
 
-class Rectangle{
+class ProperRectangle : public Rectangle {
     private:
         double width;
         double height;
         public:
-        Rectangle(double w, double h) : width(w), height(h) {}
+        ProperRectangle(double w, double h) : width(w), height(h) {}
         double area() const {
             return width * height;
         }
