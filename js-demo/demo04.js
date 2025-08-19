@@ -1,4 +1,6 @@
-
+function personMoves(from, to) {
+        console.log(`${this.name} is moving from ${from} to ${to}`);
+}
 
 function createPerson(name, age) {
     var p = new Object();
@@ -12,9 +14,7 @@ function createPerson(name, age) {
         console.log(`${this.name} is eating ${food}`);
     }
 
-    p.move = function (from, to) {
-        console.log(`${this.name} is moving from ${from} to ${to}`);
-    }
+    p.move = personMoves;
 
     return p;
 }
@@ -64,3 +64,7 @@ teachDriving(ankit, 'bike');
 
 ankit.drive('bike'); //ankit is now allowed to drive a bike
 ankit.drive('car');
+
+console.log('vivek.eat===ankit.eat',vivek.eat===ankit.eat);
+
+console.log('vivek.move===ankit.move',vivek.move===ankit.move);
