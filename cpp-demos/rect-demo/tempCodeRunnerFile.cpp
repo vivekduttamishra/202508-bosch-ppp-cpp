@@ -1,0 +1,1 @@
+cout<<"index of " << v << ": " << index << endl;

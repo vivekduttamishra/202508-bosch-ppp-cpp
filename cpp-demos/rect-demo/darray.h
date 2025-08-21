@@ -54,5 +54,14 @@ public:
         }   
         cout << endl;
     }
+
+   template<typename R>
+    R execute(ITask<T, R>* task)  {
+        task->init();
+        for (size_t i = 0; i < count; ++i) {
+            task->process(data[i]);
+        }
+        return task->end();
+    }
        
 };
